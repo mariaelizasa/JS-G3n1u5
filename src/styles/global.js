@@ -19,15 +19,11 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
-    outline: none;
+
   }
 
   input { 
     outline: none;
-  }
-
-  ul {
-    list-style: none;
   }
 
   @font-face {
