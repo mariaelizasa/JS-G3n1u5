@@ -1,10 +1,13 @@
 import React from "react";
-import { SelectIcon } from "./style";
 
 import logo from "../../assets/ranking.png";
+import { Container } from "./style";
 
-const Icon = (props) => (
-  <SelectIcon src={logo}/>
-);
-
-export default Icon;
+const Logo = (props) => {
+  return (
+    <Container>
+      <img src={props.selectImage} onClick={props.onClick} alt="logo" />
+    </Container>
+  );
+};
+export default Logo;
