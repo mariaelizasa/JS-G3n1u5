@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
 const GlobalStyle = createGlobalStyle`
 * {
     padding: 0;
@@ -32,5 +31,10 @@ const GlobalStyle = createGlobalStyle`
     src: url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 }
 `;
+
+export const override = {
+  display: "flex",
+  margin: "30vh auto",
+};
 
 export default GlobalStyle;
