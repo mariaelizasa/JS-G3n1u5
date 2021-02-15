@@ -13,8 +13,8 @@ import { Header } from "./style";
 
 function Ranking() {
   const history = useHistory();
+  const color = "#1F6F8B";
   const [ranking, setRanking] = useState([]);
-  const [color, setColor] = useState("#1F6F8B");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,7 +38,6 @@ function Ranking() {
   return (
     <Fragment>
       <Header>
-     
         <Icon selectImage={iconImage} onClick={() => handleIconClick()}></Icon>
         <h1>Ranking</h1>
       </Header>

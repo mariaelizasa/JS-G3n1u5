@@ -19,7 +19,6 @@ function Game() {
         randomNumber = Math.floor(Math.random() * 9 + 1);
         SetgeneratesNumbers([...generatesNumbers, randomNumber]);
         setRound(true);
-        console.log(clicks, "antes");
         setClicks([]);
       } else {
         showNumbers();

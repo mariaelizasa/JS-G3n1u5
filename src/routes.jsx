@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home"
 import Game from "./pages/Game/Game"
 import Ranking from "./pages/Ranking/Ranking"
-import FinalPage from "./pages/FinalPage/FinalPage"
+import Result from "./pages/Result/Result"
 
 function Routes() {
   return (
@@ -12,7 +12,7 @@ function Routes() {
         <Route path="/" exact component={Home} />
         <Route path="/ranking" component={Ranking} />
         <Route path="/game" component={Game} />
-        <Route path="/end" component={FinalPage} />
+        <Route path="/end" component={Result} />
 
       </Switch>
     </BrowserRouter>
