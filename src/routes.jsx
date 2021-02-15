@@ -12,8 +12,7 @@ function Routes() {
         <Route path="/" exact component={Home} />
         <Route path="/ranking" component={Ranking} />
         <Route path="/game" component={Game} />
-        <Route path="/end" component={Result} />
-
+        <Route path="/save" component={Result} />
       </Switch>
     </BrowserRouter>
   );

@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from "../../components/Button/Button";
 import Icon from "../../components/Icon/Icon";
 import Score from "../../components/Score/Score";
 import { useHistory } from "react-router-dom";
-
-
 
 import iconImage from "../../assets/fechar.png";
 import { Container } from "../../components/Button/style";
@@ -17,12 +15,9 @@ function Result(props) {
   const [name, setName] = useState("");
 
   // lembrar de por no utils
-
   const handleIconClick = () => {
     history.push("/");
   };
-
-  console.log(api);
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -31,12 +26,12 @@ function Result(props) {
       name: name,
       score: props.location.state,
     };
-   
-   axios.post(`${api}/save`, options ).then((res) => {
-      console.log(res);
+
+    await axios.post(`${api}save`, options).then((res) => {
       console.log(res.data);
     });
-  }
+    history.push("/ranking");
+  };
 
   return (
     <>

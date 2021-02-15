@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  color: #1f6f8b;
+  color: ${({ props }) => (props <= 3 ? "#99A8B2" : "#1F6F8B")};
   font-size: 24px;
 
   ul {

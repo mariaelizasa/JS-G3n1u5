@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import ListRanking from "../../components/ListRanking/ListRanking";
+import axios from "axios";
+
 import api from "../../services/api";
 
 import { useHistory } from "react-router-dom";
@@ -18,7 +20,7 @@ function Ranking() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    api("ranking").then((response) => {
+    axios.get(`${api}ranking`).then((response) => {
       setRanking(response.data);
       setLoading(false);
     });

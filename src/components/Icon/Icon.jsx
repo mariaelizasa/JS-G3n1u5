@@ -1,11 +1,14 @@
 import React from "react";
 
-import logo from "../../assets/ranking.png";
+import { useHistory } from "react-router-dom";
+
 import { Container } from "./style";
 
 const Logo = (props) => {
+  const history = useHistory();
+
   return (
-    <Container>
+    <Container position={history.location.pathname}>
       <img src={props.selectImage} onClick={props.onClick} alt="logo" />
     </Container>
   );

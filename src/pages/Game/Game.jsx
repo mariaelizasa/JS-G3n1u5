@@ -21,11 +21,10 @@ function Game() {
         setRound(true);
         setClicks([]);
       } else {
-        showNumbers();
+        showNumbers("");
       }
     });
   }, [round]);
-  
 
   const CompareArraysLength = (arr) => {
     return generatesNumbers.length === arr.length;
@@ -58,17 +57,17 @@ function Game() {
           <Cell
             key={index}
             onClick={() => {
-              if(round) {
-              setClicks([...clicks, parseInt(value)]);
-              let realTimeClicks = [...clicks, parseInt(value)]
-              if (CompareArraysLength(realTimeClicks)) {
-                if (CompareArraysContent(realTimeClicks)) {
-                  setScore(score + 1);
-                  setRound(false);
-                } else {
-                  history.push("/end", score);
+              if (round) {
+                setClicks([...clicks, parseInt(value)]);
+                let realTimeClicks = [...clicks, parseInt(value)];
+                if (CompareArraysLength(realTimeClicks)) {
+                  if (CompareArraysContent(realTimeClicks)) {
+                    setScore(score + 1);
+                    setRound(false);
+                  } else {
+                    history.push("/save", score);
+                  }
                 }
-              }
               }
             }}
           >
