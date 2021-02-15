@@ -1,17 +1,20 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import ListRanking from "../../components/ListRanking/ListRanking";
-import Icon from "../../components/Icon/Icon";
-
 import api from "../../services/api";
-import { override } from "../../styles/global";
-import iconImage from "../../assets/voltar.png";
+
 import { useHistory } from "react-router-dom";
+
+import { override } from "../../styles/global";
+import Icon from "../../components/Icon/Icon";
+import iconImage from "../../assets/voltar.png";
+
+import { Header } from "./style";
 
 function Ranking() {
   const history = useHistory();
   const [ranking, setRanking] = useState([]);
-  let [color, setColor] = useState("#1F6F8B");
+  const [color, setColor] = useState("#1F6F8B");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -34,11 +37,12 @@ function Ranking() {
   };
   return (
     <Fragment>
-      <div>
-      <Icon selectImage={iconImage} onClick={() => handleIconClick()}></Icon>
+      <Header>
+     
+        <Icon selectImage={iconImage} onClick={() => handleIconClick()}></Icon>
         <h1>Ranking</h1>
-        
-      </div>
+      </Header>
+
       {loading ? (
         <ClipLoader color={color} loading={loading} css={override} size={150} />
       ) : (

@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 
 import iconImage from "../../assets/ranking.png";
 
- function Home() {
+function Home() {
   const history = useHistory();
 
   // lembrar de por no utils
