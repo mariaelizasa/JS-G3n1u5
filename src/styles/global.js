@@ -21,8 +21,24 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
-  input { 
+  .saveInput { 
     outline: none;
+    width: 320px;
+    border: 2px solid #1F6F8B;
+    color: #99A8B2;
+    background-color: #1C2B2D;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 24px;
+    position: absolute;
+    bottom: 120px;
+    padding-left: 15px;
+    @media screen and (max-width: 360px) {
+    width: 300px;
+  } 
+  ::placeholder {
+    color: #99A8B2;
+   } 
   }
 
   @font-face {

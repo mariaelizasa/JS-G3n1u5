@@ -27,12 +27,12 @@ function Game() {
   }, [round]);
   
 
-  const CompareArraysLength = () => {
-    return generatesNumbers.length === clicks.length;
+  const CompareArraysLength = (arr) => {
+    return generatesNumbers.length === arr.length;
   };
 
-  const CompareArraysContent = () => {
-    return JSON.stringify(generatesNumbers) === JSON.stringify(clicks);
+  const CompareArraysContent = (arr) => {
+    return JSON.stringify(generatesNumbers) === JSON.stringify(arr);
   };
   // passar para a pagina
 
@@ -58,18 +58,18 @@ function Game() {
           <Cell
             key={index}
             onClick={() => {
+              if(round) {
               setClicks([...clicks, parseInt(value)]);
-
-              console.log(clicks, "depois");
-              if (CompareArraysLength()) {
-                if (CompareArraysContent()) {
+              let realTimeClicks = [...clicks, parseInt(value)]
+              if (CompareArraysLength(realTimeClicks)) {
+                if (CompareArraysContent(realTimeClicks)) {
                   setScore(score + 1);
                   setRound(false);
                 } else {
                   history.push("/end", score);
                 }
               }
-              //}
+              }
             }}
           >
             {value}
