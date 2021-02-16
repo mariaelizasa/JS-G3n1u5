@@ -15,15 +15,18 @@ import { Header } from "./style";
 
 function Ranking() {
   const history = useHistory();
-  const color = "#1F6F8B";
   const [ranking, setRanking] = useState([]);
   const [loading, setLoading] = useState(true);
+  const color = "#1F6F8B";
 
   useEffect(() => {
-    axios.get(`${api}ranking`).then((response) => {
-      setRanking(response.data);
-      setLoading(false);
-    });
+    axios
+      .get(`${api}ranking`)
+      .then((response) => {
+        setRanking(response.data);
+        setLoading(false);
+      })
+      .catch((error) => alert("There was an error fetching ranking"));
   }, []);
 
   const SortRanking = () => {

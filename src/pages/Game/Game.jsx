@@ -14,16 +14,18 @@ function Game() {
   let randomNumber;
 
   useEffect(() => {
-    delay(1000).then(() => {
-      if (!round) {
-        randomNumber = Math.floor(Math.random() * 9 + 1);
-        SetgeneratesNumbers([...generatesNumbers, randomNumber]);
-        setRound(true);
-        setClicks([]);
-      } else {
-        showNumbers("");
-      }
-    });
+    delay(1000)
+      .then(() => {
+        if (!round) {
+          randomNumber = Math.floor(Math.random() * 9 + 1);
+          SetgeneratesNumbers([...generatesNumbers, randomNumber]);
+          setRound(true);
+          setClicks([]);
+        } else {
+          showNumbers("");
+        }
+      })
+      .catch((error) => alert("Oops, something went wrong!"));
   }, [round]);
 
   const CompareArraysLength = (arr) => {
@@ -36,11 +38,15 @@ function Game() {
   // passar para a pagina
 
   const showNumbers = async () => {
-    for (let i = 0; i < generatesNumbers.length; i++) {
-      setDisplayNumber(generatesNumbers[i]);
-      await delay(300);
+    try {
+      for (let i = 0; i < generatesNumbers.length; i++) {
+        setDisplayNumber(generatesNumbers[i]);
+        await delay(300);
+      }
+      setDisplayNumber("");
+    } catch (error) {
+      alert(error, "Oops, something went wrong!");
     }
-    setDisplayNumber("");
   };
 
   const delay = (ms) => {

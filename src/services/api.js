@@ -1,3 +1,3 @@
-const api = "https://us-central1-prova-front-letras.cloudfunctions.net/";
+const api = `https://${process.env.REACT_APP_API_URL}`;
 
 export default api;

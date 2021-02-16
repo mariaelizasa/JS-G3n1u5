@@ -20,17 +20,21 @@ function Result(props) {
   };
 
   const handleClick = async (e) => {
-    e.preventDefault();
+    try {
+      e.preventDefault();
 
-    const options = {
-      name: name,
-      score: props.location.state,
-    };
+      const options = {
+        name: name,
+        score: props.location.state,
+      };
 
-    await axios.post(`${api}save`, options).then((res) => {
-      console.log(res.data);
-    });
-    history.push("/ranking");
+      await axios.post(`${api}save`, options).then((res) => {
+        console.log(res.data);
+      });
+      history.push("/ranking");
+    } catch (error) {
+      alert("Please enter your name");
+    }
   };
 
   return (
