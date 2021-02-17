@@ -29,6 +29,10 @@ function Ranking() {
       .catch((error) => alert("There was an error fetching ranking"));
   }, []);
 
+  const handleIconClick = () => {
+    history.push("/");
+  };
+
   const SortRanking = () => {
     ranking.sort(function (a, b) {
       return b.score - a.score;
@@ -36,10 +40,6 @@ function Ranking() {
   };
   SortRanking();
 
-  //lembrr d po no utils
-  const handleIconClick = () => {
-    history.push("/");
-  };
   return (
     <Fragment>
       <Header>

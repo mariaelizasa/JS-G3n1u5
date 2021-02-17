@@ -14,7 +14,6 @@ function Result(props) {
   const history = useHistory();
   const [name, setName] = useState("");
 
-  // lembrar de por no utils
   const handleIconClick = () => {
     history.push("/");
   };
@@ -28,9 +27,7 @@ function Result(props) {
         score: props.location.state,
       };
 
-      await axios.post(`${api}save`, options).then((res) => {
-        console.log(res.data);
-      });
+      await axios.post(`${api}save`, options).then((res) => {});
       history.push("/ranking");
     } catch (error) {
       alert("Please enter your name");

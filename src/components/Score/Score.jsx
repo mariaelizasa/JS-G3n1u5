@@ -5,8 +5,7 @@ function Score(props) {
   return (
     <>
       <Container>
-        <h1>Fim de Jogo</h1>
-
+        <h1 data-testid="title">Fim de Jogo</h1>
         <p>score</p>
         <div className="score">{props.score}</div>
       </Container>

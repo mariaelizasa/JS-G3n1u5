@@ -9,11 +9,10 @@ import iconImage from "../../assets/ranking.png";
 function Home() {
   const history = useHistory();
 
-  // lembrar de por no utils
   const handleClick = () => {
     history.push("/game");
   };
-  //lembrr d po no utils
+
   const handleIconClick = () => {
     history.push("/ranking");
   };

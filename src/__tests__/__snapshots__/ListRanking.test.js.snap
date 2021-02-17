@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Game Component should ensure that firstchild element will return expected result from passed value in the parameter: test 1`] = `test`;
