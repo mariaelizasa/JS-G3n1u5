@@ -1,3 +1,4 @@
+## 🚀 JS G3N1U5 - Game
 ![image](https://user-images.githubusercontent.com/49694866/108147277-55702c80-70ad-11eb-8eaf-7f179652ffef.png)
 
 ## Como executar / How to run
