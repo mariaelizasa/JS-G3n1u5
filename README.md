@@ -3,6 +3,8 @@
   
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/49694866/115822087-53428b00-a3da-11eb-8328-4d334f1676fb.png" alt="genius" />
+<img src="https://user-images.githubusercontent.com/49694866/115823125-242d1900-a3dc-11eb-906c-4c6315eb48e4.png" alt="genius" />
+  
 </p>
 
 
