@@ -1,7 +1,10 @@
 
 <h1 align="center">🚀 JS G3N1U5<h1/>
   
-<img align="center" src="https://user-images.githubusercontent.com/49694866/115822087-53428b00-a3da-11eb-8328-4d334f1676fb.png" alt="genius" />
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/49694866/115822087-53428b00-a3da-11eb-8328-4d334f1676fb.png" alt="genius" />
+</p>
+
 
 ## Como executar / How to run
 
